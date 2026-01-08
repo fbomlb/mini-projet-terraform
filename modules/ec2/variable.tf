@@ -1,38 +1,35 @@
 variable "instance_type" {
-    type = string
-    default = "t2.medium"
-    description = "value"
+  type = string
+  default = "t2.medium"
+  description = "Instance type for the EC2 instance"
 }
 
 variable "key_name" {
-    type = string
-    default = "projet-terraform"
-    description = "value"
+  type = string 
+  default = "projet-terraform"
+  description = "Key pair name for the EC2 instance"
 }
 
 variable "tags" {
-    type  = map
-    default = {
-        Name = "ec2_instance"
-    }
-    description = "Tag Name of the EC2 instance"
-}
-
-variable "user" {
-    type = string
-    default = "ubuntu"
-    description = "The user to connect to the instance"
+  type = map
+  default = {
+    Name = "ec2"
+  }
+  description = "Tags for the EC2 instance"
 }
 
 variable "security_group_name" {
     type = string
     default = "security_group"
-    description = "Name of the Security Group"
+    description = "Name of the security group"
 }
 
-variable "ami" {
+variable "user" {
+  type = string
+  default = "ubuntu"
+  description = "User for the EC2 instance"
 }
 
 variable "availability_zone" {
-    
+  
 }

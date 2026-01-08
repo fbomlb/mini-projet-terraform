@@ -1,4 +1,4 @@
-resource "aws_security_group" "sg" {
+resource "aws_security_group" "security_group" {
   name = var.security_group_name
 
   ingress {
@@ -25,7 +25,5 @@ resource "aws_security_group" "sg" {
     protocol = "-1"
     cidr_blocks = [ "0.0.0.0/0" ]
   }
-  tags = {
-    Name = var.security_group_tag
-  }
+  tags =  var.security_group_tag
 }

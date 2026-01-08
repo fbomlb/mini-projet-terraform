@@ -7,8 +7,7 @@ variable "security_group_name" {
 variable "security_group_tag" {
     type = map
     default = {
-        Name = "security_group_tag"
+        Name = "security_group"
     }
+    description = "Tag for Security Group"
 }
-
-

@@ -1,9 +1,6 @@
 resource "aws_eip" "eip" {
-  domain = "vpc"  
   provisioner "local-exec" {
     command = "echo \"${aws_eip.eip.public_ip}\" > ip_address.txt"
   }
-  tags = {
-    Name = var.eip_tag
-  }
+  tags = var.eip_tag
 }

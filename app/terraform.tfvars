@@ -1,15 +1,15 @@
-instance_type = "t2.medium"
-instance_tag = "ec2-projet"
+instance_type       = "t3.micro"
+instance_tag        = { Name = "ec2-projet" }
+security_group_name = "mini-projet-terraform-sg"
+security_group_tag  = { Name = "mini-projet-terraform-sg" }
 
-security_group_name = "mini-projet-terraform"
-security_group_tag  = "mini-projet-terraform"
+#key_name         = "devops_fbomlb78"
+key_name = "devops_fbomlb78-new"
 
-key_name = "devops_fbomlb78"
 user = "ubuntu"
 
-ebs_zone = "ue-west-3"
+ebs_zone = "eu-west-3c"
 ebs_size = "10"
-ebs_tag = "ebs-projet"
-
-eip_tag = "eip-projet"
+ebs_tag  = { Name = "ebs-projet" }
+eip_tag  = { Name = "eip-projet" }
 
